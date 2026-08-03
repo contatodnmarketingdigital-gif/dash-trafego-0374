@@ -329,7 +329,7 @@
     return `<div class="cc ${win?'win':'cut'}">
       <div class="imgbox">
         <span class="rib ${win?'good':'cut'}">${win?'REPLICAR':'CORTAR'}</span>
-        <img src="${c.img}" referrerpolicy="no-referrer" loading="lazy" alt="${c.n}" onerror="this.closest('.cc').classList.add('noimg')">
+        <img src="${c.img}" alt="${c.n}" loading="eager" decoding="async">
         <a class="ph" href="${c.pl}" target="_blank" rel="noopener">🖼️<span>Prévia no Instagram ↗</span></a>
       </div>
       <div class="meta">
@@ -344,13 +344,6 @@
   document.getElementById('g-tdcs').innerHTML = C.tdcs.map(c=>card(c,'win')).join('');
   document.getElementById('g-vaga').innerHTML = C.vaga.map(c=>card(c,'win')).join('');
   document.getElementById('g-cut').innerHTML  = C.cut.map(c=>card(c,'cut')).join('');
-  // fallback: se a miniatura do Meta não carregar em 6s, mostra o card-link (evita imagem quebrada)
-  setTimeout(()=>{
-    document.querySelectorAll('#p2 .cc').forEach(cc=>{
-      const im = cc.querySelector('img');
-      if(!im || !im.complete || im.naturalWidth===0) cc.classList.add('noimg');
-    });
-  }, 6000);
 </script>
 </body>
 </html>
