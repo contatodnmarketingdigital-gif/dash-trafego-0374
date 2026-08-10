@@ -119,6 +119,15 @@
   .cc .cm b{color:var(--ink);font-variant-numeric:tabular-nums}
   .cc .cobs{font-size:11.5px;color:var(--ink2);background:rgba(208,59,59,.08);border:1px solid rgba(208,59,59,.28);border-radius:8px;padding:8px 10px;margin-top:8px;line-height:1.42}
   .cc .cobs b{color:var(--crit)}
+  .cklist{margin:8px 0 0}
+  .ck{display:flex;gap:10px;align-items:flex-start;padding:9px 2px;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink2);cursor:pointer}
+  .ck:last-child{border-bottom:0}
+  .ck:hover{color:var(--ink)}
+  .ck input{margin-top:2px;width:16px;height:16px;accent-color:var(--good);flex:0 0 auto;cursor:pointer}
+  .ck b{color:var(--ink)}
+  .ck input:checked + span{text-decoration:line-through;opacity:.55}
+  .trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:14px}
+  @media(max-width:760px){.trio{grid-template-columns:1fr}}
   .cc .lk{margin-top:auto;padding-top:8px;font-size:11.5px}
   .cc .lk a{color:var(--blue);text-decoration:none;font-weight:600}
   .cc .lk a:hover{text-decoration:underline}
@@ -140,6 +149,7 @@
     <button class="tab active" data-p="p0">Evolução · Semana</button>
     <button class="tab" data-p="p1">Julho (baseline)</button>
     <button class="tab" data-p="p2">Prints dos Criativos</button>
+    <button class="tab" data-p="p3">Padrões &amp; Produção</button>
   </div>
 
 
@@ -566,7 +576,84 @@
     </div>
   </div>
 
-  <footer>
+<div class="panel" id="p3">
+    <div class="note" style="margin-top:18px">
+      <b>Padrões dos criativos vencedores + guia de produção.</b> O que os anúncios de melhor ROAS/CPL (Julho + semana atual) têm em comum, e um checklist prático para briefar os próximos.
+    </div>
+
+    <div class="card">
+      <div class="phead"><span class="dot" style="background:var(--good)"></span><h2>Anatomia dos vencedores</h2><span class="tag">o que se repete</span></div>
+      <div class="cols">
+        <div class="box win"><h3>Formatos que mais convertem</h3><ul>
+          <li><b>"Notícia / Informe publicitário"</b> (Notícia 01/02) &rarr; <b>ROAS 23</b>. Formato editorial dá credibilidade e é o de maior retorno — ainda pouco explorado.</li>
+          <li><b>Imagem com segmentação de profissão</b> (AD130: Psicólogos/Médicos/Fisio) &rarr; volume de vendas.</li>
+          <li><b>Vídeo educativo "o que é X na prática"</b> (tDCS) &rarr; lead baratíssimo (CPC R$ 0,26).</li>
+          <li><b>Talking-head "Caixinha"</b> (Vaga) &rarr; ROAS 9–12 em low ticket.</li>
+        </ul></div>
+        <div class="box win"><h3>Oferta &amp; gatilhos que funcionam</h3><ul>
+          <li><b>Oferta explícita</b>: bolsa/desconto (até 30%), "inscrições abertas", "turma 2026.2", parcelamento.</li>
+          <li><b>Urgência</b>: últimas vagas / lote especial / prazo.</li>
+          <li><b>Autoridade</b>: Dr. Alexandre Barbosa (PhD), credenciamento MEC, artigos publicados.</li>
+          <li><b>Ângulo por cidade</b> (Recife, SP) nos criativos de captação regional.</li>
+        </ul></div>
+      </div>
+      <div class="note" style="margin:14px 0 0;border-color:rgba(12,163,12,.35);background:rgba(12,163,12,.08)">
+        <b>Regra de ouro:</b> formato editorial/notícia + oferta clara (bolsa + turma + urgência) + autoridade (PhD/MEC) + segmentação (profissão ou cidade). Quando os 4 aparecem juntos, o ROAS dispara (ex.: Notícia 02, ROAS 23).
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="phead"><span class="dot" style="background:var(--blue)"></span><h2>Insights para os próximos criativos</h2><span class="tag">por produto</span></div>
+      <div class="trio">
+        <div class="box win"><h3>Pós-Graduação</h3><ul>
+          <li>Produzir <b>3–4 variações "notícia/editorial"</b> — padrão de maior ROAS e subexplorado.</li>
+          <li><b>Clonar o AD130</b> para novas profissões: nutricionista, enfermeiro, T.O., dentista, farmacêutico.</li>
+          <li>Sempre com <b>bolsa + turma 2026.2 + urgência</b> e selo <b>MEC/PhD</b>.</li>
+          <li>Headline com a <b>profissão no topo</b> da imagem.</li>
+        </ul></div>
+        <div class="box win"><h3>tDCS</h3><ul>
+          <li>Manter vídeos <b>"o que é tDCS na prática"</b> (topo de funil barato).</li>
+          <li>Abrir <b>novas cidades</b> no ângulo regional: BH, Curitiba, Porto Alegre, Salvador.</li>
+          <li><b>Renovar o criativo de Recife</b> (saturado, frequência 10+).</li>
+          <li><b>CTA mais direto</b> no fim do vídeo p/ acelerar lead &rarr; venda.</li>
+        </ul></div>
+        <div class="box win"><h3>Vaga / VAGAL</h3><ul>
+          <li><b>Clonar 3 novos "Caixinha"</b> (talking-head) — formato campeão (ROAS 9–12).</li>
+          <li><b>Renovar o Caixinha 06</b> (fadigou, zerou vendas na semana).</li>
+          <li>Reforçar <b>urgência + parcelamento</b> no criativo p/ sustentar o ROAS.</li>
+          <li>Levar tráfego p/ <b>Feed</b> (evitar Reels, que teve ROAS baixo).</li>
+        </ul></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="phead"><span class="dot" style="background:var(--orange)"></span><h2>Checklist de produção do criativo</h2><span class="tag">marcar antes de subir</span></div>
+      <div class="cols">
+        <div class="box"><h3>Briefing &amp; ângulo</h3>
+          <div class="cklist">
+            <label class="ck"><input type="checkbox"><span><b>Formato</b> definido (notícia/editorial · imagem c/ profissão · vídeo "o que é X" · caixinha)</span></label>
+            <label class="ck"><input type="checkbox"><span><b>Ângulo</b> escolhido: profissão, cidade ou dor específica</span></label>
+            <label class="ck"><input type="checkbox"><span><b>Público certo</b> (profissão/cidade) + camada de <b>remarketing</b> (visitou o perfil / engajou)</span></label>
+            <label class="ck"><input type="checkbox"><span><b>2–3 variações</b> do mesmo ângulo p/ teste A/B</span></label>
+            <label class="ck"><input type="checkbox"><span><b>Nome padronizado</b>: [PRODUTO][FORMATO][ÂNGULO][DATA] p/ rastreio</span></label>
+          </div>
+        </div>
+        <div class="box"><h3>Copy, prova &amp; técnico</h3>
+          <div class="cklist">
+            <label class="ck"><input type="checkbox"><span><b>Oferta explícita</b> no criativo (bolsa/desconto · turma · urgência · parcelamento)</span></label>
+            <label class="ck"><input type="checkbox"><span><b>Autoridade/prova</b> (Dr. PhD · selo MEC · nº de técnicas/horas · artigos)</span></label>
+            <label class="ck"><input type="checkbox"><span><b>Promessa clara</b> nos 3 primeiros segundos (vídeo) ou no topo (imagem)</span></label>
+            <label class="ck"><input type="checkbox"><span><b>CTA direto</b> (Inscreva-se · Garanta sua vaga · Saiba mais)</span></label>
+            <label class="ck"><input type="checkbox"><span><b>Legível no mobile</b> (texto grande, alto contraste, safe zones)</span></label>
+            <label class="ck"><input type="checkbox"><span><b>Destino correto</b> (link p/ a página da oferta certa)</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="note" style="margin:14px 0 0">Dica: as caixinhas são clicáveis para usar ao vivo na reunião (marcação não é salva ao recarregar).</div>
+    </div>
+  </div>
+
+    <footer>
     Dados: Meta Ads via Windsor.ai · atribuição de pixel · 01–31/07/2026. Receita = valor de compra rastreado no pixel; vendas de tDCS fechadas pelo comercial a partir de leads não entram no ROAS de mídia. Investimento total R$ 54.898,64 · Receita R$ 181.664,16 · ROAS 3,31.
   </footer>
 </div>
