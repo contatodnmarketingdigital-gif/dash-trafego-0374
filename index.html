@@ -132,17 +132,119 @@
 <div class="wrap">
   <header class="top">
     <div class="kicker">Reunião de Equipe · Tráfego Pago</div>
-    <h1>Dashboard por Produto — Julho / 2026</h1>
-    <div class="sub">Meta Ads · Contas <b>Cursos Alexandre</b> + <b>Conta 02-TEA</b> · Período 01–31/07/2026 · Fonte: Windsor.ai (atribuição de pixel)</div>
+    <h1>Dashboard por Produto — Evolução Semanal</h1>
+    <div class="sub">Meta Ads · <b>Cursos Alexandre</b> + <b>Conta 02-TEA</b> · Semana <b>03–09/08/2026</b> vs baseline <b>Julho/2026</b> · Fonte: Windsor.ai (pixel) · atualizado 10/08/2026</div>
   </header>
 
   <div class="tabs">
-    <button class="tab active" data-p="p1">Visão por Produto</button>
+    <button class="tab active" data-p="p0">Evolução · Semana</button>
+    <button class="tab" data-p="p1">Julho (baseline)</button>
     <button class="tab" data-p="p2">Prints dos Criativos</button>
   </div>
 
+
+  <!-- ============ PAINEL 0 — EVOLUÇÃO ============ -->
+  <div class="panel active" id="p0">
+  <div class="note" style="margin-top:18px;border-color:rgba(250,178,25,.45);background:rgba(250,178,25,.10)">
+    <b>Semana 03–09/08</b> comparada ao baseline <b>Julho/2026</b>. Comparações de ritmo usam a <b>média semanal de Julho</b> (mês ÷ 4,43). <b>Atenção:</b> semana recém-fechada — a atribuição de pixel ainda subestima receita/vendas e os leads de tDCS entram em conversão pelo comercial nos próximos dias. Ler como <b>tendência</b>, não número final.
+  </div>
+
+  <div class="strip">
+    <div class="kpi"><div class="lab">Investido · semana</div><div class="val">R$ 7,76 mil</div><div class="s" style="font-size:11.5px;color:var(--muted);margin-top:3px">63% do ritmo de Julho</div></div>
+    <div class="kpi"><div class="lab">Receita · semana</div><div class="val">R$ 14,4 mil</div><div class="s" style="font-size:11.5px;color:var(--muted);margin-top:3px">35% do ritmo (atrib. parcial)</div></div>
+    <div class="kpi"><div class="lab">ROAS · semana</div><div class="val" style="color:var(--crit)">1,86</div><div class="s" style="font-size:11.5px;color:var(--muted);margin-top:3px">Julho 3,31 ▼</div></div>
+    <div class="kpi"><div class="lab">Vendas · semana</div><div class="val">12</div><div class="s" style="font-size:11.5px;color:var(--muted);margin-top:3px">Julho ~20/sem</div></div>
+    <div class="kpi"><div class="lab">Leads · semana</div><div class="val">150</div><div class="s" style="font-size:11.5px;color:var(--muted);margin-top:3px">Julho ~261/sem</div></div>
+  </div>
+
+  <!-- Quadro de evolução -->
+  <div class="cmp">
+    <h2>Quadro de evolução — Semana vs Julho</h2>
+    <div class="csub">▲ melhora · ▼ piora · = estável. Ritmo = semana vs média semanal de Julho.</div>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead><tr style="text-align:left;color:var(--muted);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em">
+        <th style="padding:8px 10px;border-bottom:1px solid var(--line)">Indicador</th>
+        <th style="padding:8px 10px;border-bottom:1px solid var(--line)">Semana 03–09/08</th>
+        <th style="padding:8px 10px;border-bottom:1px solid var(--line)">Julho (ref.)</th>
+        <th style="padding:8px 10px;border-bottom:1px solid var(--line)">Tendência</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:8px 10px;border-bottom:1px solid var(--line)">ROAS geral</td><td style="padding:8px 10px;border-bottom:1px solid var(--line)"><b>1,86</b></td><td style="padding:8px 10px;border-bottom:1px solid var(--line)">3,31</td><td style="padding:8px 10px;border-bottom:1px solid var(--line);color:var(--crit);font-weight:700">▼ atrib. parcial</td></tr>
+        <tr><td style="padding:8px 10px;border-bottom:1px solid var(--line)">Investimento (ritmo)</td><td style="padding:8px 10px;border-bottom:1px solid var(--line)"><b>R$ 7,76 mil</b></td><td style="padding:8px 10px;border-bottom:1px solid var(--line)">R$ 12,4 mil/sem</td><td style="padding:8px 10px;border-bottom:1px solid var(--line);color:var(--ink2);font-weight:700">▼ menos verba</td></tr>
+        <tr><td style="padding:8px 10px;border-bottom:1px solid var(--line)">Receita (ritmo)</td><td style="padding:8px 10px;border-bottom:1px solid var(--line)"><b>R$ 14,4 mil</b></td><td style="padding:8px 10px;border-bottom:1px solid var(--line)">R$ 41,0 mil/sem</td><td style="padding:8px 10px;border-bottom:1px solid var(--line);color:var(--crit);font-weight:700">▼</td></tr>
+        <tr><td style="padding:8px 10px;border-bottom:1px solid var(--line)">Pós — ROAS (Alexandre)</td><td style="padding:8px 10px;border-bottom:1px solid var(--line)"><b>2,82</b></td><td style="padding:8px 10px;border-bottom:1px solid var(--line)">6,93</td><td style="padding:8px 10px;border-bottom:1px solid var(--line);color:var(--crit);font-weight:700">▼ monitorar</td></tr>
+        <tr><td style="padding:8px 10px;border-bottom:1px solid var(--line)">tDCS — CPL</td><td style="padding:8px 10px;border-bottom:1px solid var(--line)"><b>R$ 36,71</b></td><td style="padding:8px 10px;border-bottom:1px solid var(--line)">~R$ 31,70</td><td style="padding:8px 10px;border-bottom:1px solid var(--line);color:var(--crit);font-weight:700">▼ mais caro</td></tr>
+        <tr><td style="padding:8px 10px;border-bottom:1px solid var(--line)">tDCS — leads (ritmo)</td><td style="padding:8px 10px;border-bottom:1px solid var(--line)"><b>48</b></td><td style="padding:8px 10px;border-bottom:1px solid var(--line)">~95/sem</td><td style="padding:8px 10px;border-bottom:1px solid var(--line);color:var(--crit);font-weight:700">▼</td></tr>
+        <tr><td style="padding:8px 10px">Vaga — ROAS</td><td style="padding:8px 10px"><b>4,20</b></td><td style="padding:8px 10px">2,49</td><td style="padding:8px 10px;color:var(--good-ink);font-weight:700">▲ melhorou</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- Cards por produto -->
+  <div class="card">
+    <div class="phead">
+      <span class="dot" style="background:var(--blue)"></span>
+      <h2>Pós-Graduação</h2><span class="tag">Vendas + Captação</span>
+      <span class="verdict v-warn">● Em ramp-up — MONITORAR</span>
+    </div>
+    <div class="tiles">
+      <div class="tile"><div class="l">Investido (sem)</div><div class="n">R$ 4,56 mil</div><div class="s">4 campanhas</div></div>
+      <div class="tile"><div class="l">Receita (sem)</div><div class="n">R$ 9,92 mil</div><div class="s">8 vendas · 100 leads</div></div>
+      <div class="tile"><div class="l">ROAS Alexandre</div><div class="n warn">2,82</div><div class="s">Julho 6,93 ▼</div></div>
+      <div class="tile"><div class="l">Checkouts</div><div class="n">88</div><div class="s">LPV 706</div></div>
+    </div>
+    <div class="box" style="margin-top:14px"><h3 style="color:var(--ink)">Leitura</h3><ul>
+      <li>ROAS caiu de <b>6,93 → 2,82</b>, mas <b>2 campanhas de venda foram lançadas nesta semana</b> (VARIAÇÕES 06/08 e NTC 03/08) e ainda estão em aprendizado; compras recentes também estão subatribuídas.</li>
+      <li><b>Ação:</b> manter AD130/AD129 rodando, não julgar as novas campanhas antes de 7 dias de dados maduros.</li>
+    </ul></div>
+  </div>
+
+  <div class="card">
+    <div class="phead">
+      <span class="dot" style="background:var(--orange)"></span>
+      <h2>tDCS</h2><span class="tag">Geração de Leads</span>
+      <span class="verdict v-crit">● Saturação — RENOVAR</span>
+    </div>
+    <div class="tiles">
+      <div class="tile"><div class="l">Investido (sem)</div><div class="n">R$ 1,76 mil</div><div class="s">6 campanhas</div></div>
+      <div class="tile"><div class="l">Leads (sem)</div><div class="n">48</div><div class="s">Julho ~95/sem ▼</div></div>
+      <div class="tile"><div class="l">CPL</div><div class="n crit">R$ 36,71</div><div class="s">Julho ~R$ 31,70 ▼</div></div>
+      <div class="tile"><div class="l">Frequência (Recife)</div><div class="n crit">10,3</div><div class="s">sinal de saturação</div></div>
+    </div>
+    <div class="box" style="margin-top:14px"><h3 style="color:var(--ink)">Leitura</h3><ul>
+      <li>Ritmo de leads caiu pela metade e o CPL subiu. As campanhas de Recife rodam com <b>frequência ~10</b> — o público está esgotado.</li>
+      <li><b>Ação:</b> renovar criativo e ampliar/− trocar público; 0 venda direta é esperado (fecha pelo comercial a partir dos leads).</li>
+    </ul></div>
+  </div>
+
+  <div class="card">
+    <div class="phead">
+      <span class="dot" style="background:var(--aqua)"></span>
+      <h2>Vaga / VAGAL</h2><span class="tag">Vendas · Conta TEA</span>
+      <span class="verdict v-good">● Mais eficiente — ESCALAR COM CAUTELA</span>
+    </div>
+    <div class="tiles">
+      <div class="tile"><div class="l">Investido (sem)</div><div class="n">R$ 1,07 mil</div><div class="s">33% do ritmo de Julho</div></div>
+      <div class="tile"><div class="l">Receita (sem)</div><div class="n good">R$ 4,49 mil</div><div class="s">4 vendas</div></div>
+      <div class="tile"><div class="l">ROAS</div><div class="n good">4,20</div><div class="s">Julho 2,49 ▲</div></div>
+      <div class="tile"><div class="l">Destaque</div><div class="n good">ROAS ~30</div><div class="s">[IMAGEM NOVA] R$997/R$32</div></div>
+    </div>
+    <div class="box win" style="margin-top:14px"><h3>O que funcionou</h3><ul>
+      <li>Verba <b>cortada</b> e eficiência <b>subiu</b> (ROAS 2,49 → 4,20) — exatamente a recomendação de Julho aplicada.</li>
+      <li>Novo criativo <b>[IMAGEM NOVA]</b>: 1 venda de R$ 997 com R$ 32,62 (ROAS ~30). Caixinha segue vendendo (3 vendas, R$ 3.491).</li>
+      <li><b>Ação:</b> escalar [IMAGEM NOVA] e Caixinha com aumento gradual (20–30%/vez) para não repetir o CPA alto de Julho.</li>
+    </ul></div>
+  </div>
+
+  <div class="note">
+    <b>Resumo da semana:</b> a operação rodou com <b>menos verba</b> (63% do ritmo) e ROAS de mídia menor (1,86), puxado por <b>atribuição ainda incompleta</b> e por <b>campanhas de venda de Pós recém-lançadas</b>. Sinal positivo claro: <b>Vaga/VAGAL ficou mais lucrativa gastando menos</b>. Prioridades: <b>1)</b> deixar as novas campanhas de Pós maturarem 7 dias; <b>2)</b> renovar criativo/público de tDCS (saturação); <b>3)</b> escalar os vencedores de Vaga com cautela.
+  </div>
+  </div>
+
   <!-- ============ PAINEL 1 ============ -->
-  <div class="panel active" id="p1">
+  <div class="panel" id="p1">
   <div class="strip">
     <div class="kpi"><div class="lab">Investimento</div><div class="val">R$ 54,9 mil</div></div>
     <div class="kpi"><div class="lab">Receita</div><div class="val">R$ 181,7 mil</div></div>
