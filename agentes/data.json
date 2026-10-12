@@ -1,145 +1,501 @@
 {
- "atualizado": "2026-10-12",
+ "atualizado": "12/10/2026 14:53",
  "meta": {
-  "faturamento": 591,
-  "alvo": 100000,
-  "vendas": 3,
-  "preco": 297,
-  "cpa_teto": 84,
+  "campanha_nome": "Campanha Agenda Certa · R$ 297",
   "cpa_alvo": 63,
-  "cpa_atual": 410,
-  "cpa_atual_nota": "vendas a R$ 197, 04/09 a 12/10"
- },
- "campanha": {
-  "nome": "Campanha Agenda Certa · R$ 297",
-  "diagnostico": "A campanha não está parada nos agentes. O pacote está pronto e revisado. Ela espera duas coisas fora deles: o checkout da Greenn, que ainda abre com outro nome e a R$ 197, e as decisões da Delaine.",
+  "cpa_teto": 84,
+  "diagnostico": "Página e checkout a R$ 297 no ar. 4 anúncios nativos revisados. Falta a aprovação da Delaine e o pré-voo do Cláudio para subir.",
+  "fase": "Pré-voo",
+  "faturamento": 591,
+  "meta_faturamento": 100000,
+  "nota": "3 vendas a R$ 197 até 12/10. Próximas campanhas a R$ 297.",
   "passos": [
    {
-    "t": "Pacote pronto e revisado",
-    "dono": "Agentes",
+    "d": "12x de R$ 30,54, produto 192147",
+    "dono": "Delaine",
     "estado": "feito",
-    "d": "Página, anúncios, estrutura e recuperação. 2 voltas de revisão."
+    "t": "Página e checkout a R$ 297"
    },
    {
-    "t": "Artes novas com foto (no lugar do vídeo A2)",
-    "dono": "Produção",
-    "estado": "fazendo",
-    "d": "3 artes com fotos do ensaio Delaine 55"
+    "d": "30 anúncios com 30+ dias no ar",
+    "dono": "Copy",
+    "estado": "feito",
+    "t": "Pesquisa do que converte"
    },
    {
-    "t": "Decisões da Delaine",
+    "d": "A1, F2, F4, F6, sem reprova",
+    "dono": "Produção + Revisão",
+    "estado": "feito",
+    "t": "4 anúncios nativos revisados"
+   },
+   {
+    "d": "Peças, frases na voz dela, checklist completo",
     "dono": "Delaine",
     "estado": "esperando",
-    "d": "Preço e parcelas, order bump, página que recebe o tráfego, janela de R$ 197, aprovar as peças"
+    "t": "Checklist e aprovação"
    },
    {
-    "t": "Greenn corrigida",
+    "d": "Nome no checkout, UTM, compra teste, pausar antigas",
     "dono": "Cláudio",
     "estado": "esperando",
-    "d": "Nome 'Agenda Certa', R$ 297, opt-in de WhatsApp, UTMs do link"
+    "t": "Pré-voo"
    },
    {
-    "t": "Compra de teste e pixel com valor 297",
-    "dono": "Cláudio",
-    "estado": "fila",
-    "d": "No celular, antes de gastar R$ 1"
-   },
-   {
-    "t": "Campanha no ar",
+    "d": "Instagram, 35 a 65, R$ 90/dia, 7 dias sem mexer",
     "dono": "Cláudio + Mídia",
     "estado": "fila",
-    "d": "Instagram, 35 a 65 anos, R$ 90 por dia, sem mexer por 7 dias"
+    "t": "Campanha no ar"
    },
    {
-    "t": "Leitura do dia 7",
+    "d": "Vencedor vira 80%, um teste novo vira 20%",
     "dono": "Mídia e Dados",
     "estado": "fila",
-    "d": "Escada de CPA: manter, corrigir o gargalo ou pausar"
+    "t": "Dia 7: leitura e 80/20"
    }
-  ]
+  ],
+  "preco": 297,
+  "vendas": 3,
+  "id": "geral"
  },
  "agentes": [
   {
-   "id": "diretor",
-   "nome": "Diretor",
+   "alinhado": "sim",
+   "dono_numero": "Prazo das entregas e aprovação sem retrabalho",
    "icone": "bussola",
+   "leitura": "Rodou o pacote da campanha a R$ 297 em 5 voltas de revisão.",
+   "melhorar": "Pedir aprovação com prazo de 48 h. Sem prazo, o pacote fica parado esperando decisão.",
+   "nome": "Diretor",
+   "ordem": 1,
    "papel": "Transforma o número da semana em pedido para os agentes e entrega um pacote só para aprovar.",
-   "numero": "Prazo das entregas e aprovação sem retrabalho",
+   "pct": 70,
+   "proximo": "Primeiro pacote: campanha [AC][VENDAS] a R$ 297, depois que a ficha for aprovada",
    "skills": [
     "luminar-diretor"
    ],
-   "alinhado": "sim",
-   "leitura": "Rodou o primeiro pacote completo em um dia, com revisão em 2 voltas.",
-   "melhorar": "Pedir aprovação com prazo de 48 h. Sem prazo, o pacote fica parado esperando decisão."
+   "status": "pronto",
+   "id": "diretor"
   },
   {
-   "id": "copy",
-   "nome": "Estratégia e Copy",
+   "alinhado": "sim",
+   "dono_numero": "Taxa de gancho, CTR e visita que chega à página",
    "icone": "pena",
-   "papel": "Decide o ângulo e escreve página e anúncios a partir da dor literal do público e da régua de promessa.",
-   "numero": "CTR, CPC até R$ 2,50 e 80% dos cliques chegando à página",
+   "leitura": "Achou o checkout com outro nome e fez a pesquisa que trocou as artes por formatos nativos.",
+   "melhorar": "Rodar o ritual do Andrômeda e a regra 80/20 em toda rodada, sem exceção.",
+   "nome": "Estratégia e Copy",
+   "ordem": 2,
+   "papel": "Pesquisa o que converte (Biblioteca de Anúncios e Andrômeda) e escreve página e anúncios com a dor literal do público.",
+   "pct": 75,
+   "proximo": "Reescrever os anúncios na promessa \"paciente certo\"",
    "skills": [
     "joana-copy-infoproduto",
     "social-seller-instagram"
    ],
-   "alinhado": "sim",
-   "leitura": "Achou o maior problema da campanha: o checkout abre como outro produto e a R$ 197.",
-   "melhorar": "Teve 1 reprova por política do Meta (A1). Conferir a checklist do Meta antes de entregar."
+   "status": "pronto",
+   "id": "estrategia-copy"
   },
   {
-   "id": "producao",
-   "nome": "Produção",
+   "alinhado": "sim",
+   "dono_numero": "CPA até R$ 84 e ROAS líquido 3+",
+   "icone": "grafico",
+   "leitura": "Mostrou que 36% da verba ia para quem não compra e 28% para fora do Instagram.",
+   "melhorar": "Conectar Instagram e Greenn: sem eles, seguidores e vendas reais ficam pela metade.",
+   "nome": "Mídia e Dados",
+   "ordem": 4,
+   "papel": "Mede cada projeto pela sua régua, elege o gargalo em reais e decide escala ou pausa.",
+   "pct": 80,
+   "proximo": "Estrutura da campanha única: Instagram, 35 a 65, 4 anúncios",
+   "skills": [
+    "gestao-trafego-meta",
+    "rodar-analise.ps1"
+   ],
+   "status": "pronto",
+   "id": "midia-dados"
+  },
+  {
+   "alinhado": "parcial",
+   "dono_numero": "Visita que vira compra (meta 4,2%)",
    "icone": "moldura",
-   "papel": "Transforma a copy em arte e vídeo, sempre com prova real (tela do app) e foto da Delaine.",
-   "numero": "Visita que vira compra: de 3,7% a 5%",
+   "leitura": "Começou com arte de marca (rejeitada) e corrigiu para vídeo falando para a câmera, story e tweet.",
+   "melhorar": "Gravar material novo com microfone de lapela: os vídeos antigos têm baixa resolução.",
+   "nome": "Produção",
+   "ordem": 3,
+   "papel": "Transforma a copy em vídeo e imagem no formato nativo do Instagram, a partir de referência pesquisada.",
+   "pct": 70,
+   "proximo": "Consertar o checkout da página nova e editar o vídeo novo",
    "skills": [
     "criativos-imagem",
     "edicao-video-criativo",
     "apresentacao-premium"
    ],
+   "status": "pronto",
+   "id": "producao"
+  },
+  {
    "alinhado": "parcial",
-   "leitura": "Recortou bem os vídeos, mas o A2 foi descartado por causa do áudio.",
-   "melhorar": "Medir o áudio antes de editar e trabalhar a partir de um banco de fotos e vídeos aprovado (inventário em andamento)."
-  },
-  {
-   "id": "midia",
-   "nome": "Mídia e Dados",
-   "icone": "grafico",
-   "papel": "Mede cada projeto pela sua régua, elege o gargalo em reais e decide escala ou pausa.",
-   "numero": "CPA até R$ 84 e ROAS líquido de 3 ou mais",
-   "skills": [
-    "gestao-trafego-meta",
-    "rotina de segunda"
-   ],
-   "alinhado": "sim",
-   "leitura": "Mostrou que 36% da verba ia para quem tem 18 a 34 anos, sem nenhum checkout, e que 28% ia para fora do Instagram, sem venda.",
-   "melhorar": "Faltam Instagram e Greenn conectados. Sem eles, seguidores e vendas reais ficam sem a outra metade da conta."
-  },
-  {
-   "id": "revisao",
-   "nome": "Revisão",
-   "icone": "escudo",
-   "papel": "Revisor independente: posicionamento, regras do conselho, política do Meta, LGPD e números conferidos contra a fonte.",
-   "numero": "Peças reprovadas antes de publicar",
-   "skills": [
-    "luminar-revisao"
-   ],
-   "alinhado": "sim",
-   "leitura": "Pegou 1 reprova (A1) e a promessa de quantidade nos vídeos antes de subirem.",
-   "melhorar": "Rodar uma checagem curta já no briefing, para cortar uma volta de retrabalho."
-  },
-  {
-   "id": "relacionamento",
-   "nome": "Relacionamento",
+   "dono_numero": "Vendas recuperadas e conversas que viram atendimento",
    "icone": "conversa",
+   "leitura": "Mensagens prontas, mas os 17 checkouts abandonados ainda não foram chamados.",
+   "melhorar": "Depende do opt-in na Greenn, da decisão da janela de R$ 197 e do WhatsApp conectado.",
+   "nome": "Relacionamento",
+   "ordem": 6,
    "papel": "Conversa depois do clique: recupera checkout, atende lead e acompanha aluno. Nunca envia sem aprovação.",
-   "numero": "Vendas recuperadas e conversas que viram atendimento",
+   "pct": 55,
+   "proximo": "Lista e mensagens para os 17 checkouts abandonados (esperando a decisão de preço)",
    "skills": [
     "luminar-relacionamento"
    ],
-   "alinhado": "parcial",
-   "leitura": "As mensagens estão prontas, mas os 17 checkouts abandonados ainda não foram chamados.",
-   "melhorar": "Depende do opt-in na Greenn, da decisão sobre a janela de R$ 197 e do WhatsApp conectado."
+   "status": "pronto",
+   "id": "relacionamento"
+  },
+  {
+   "alinhado": "sim",
+   "dono_numero": "Peças reprovadas antes de publicar, zero problema com conselho",
+   "icone": "escudo",
+   "leitura": "Em 5 voltas, barrou 3 peças que o Meta reprovaria antes de subirem.",
+   "melhorar": "Checar no briefing, antes da produção, para cortar voltas de retrabalho.",
+   "nome": "Revisão",
+   "ordem": 5,
+   "papel": "Revisor independente: posicionamento, conselho, política do Meta, LGPD e números contra a fonte.",
+   "pct": 75,
+   "proximo": "Revisar o primeiro pacote do Diretor",
+   "skills": [
+    "luminar-revisao"
+   ],
+   "status": "pronto",
+   "id": "revisao"
+  }
+ ],
+ "tarefas": [
+  {
+   "id": "t01",
+   "titulo": "Compra de teste no celular na página nova: preço e Pix/parcelamento batem com a página?",
+   "agente": "Produção",
+   "resp": "Cláudio",
+   "status": "afazer"
+  },
+  {
+   "id": "t02",
+   "titulo": "Chamar no WhatsApp as 17 pessoas que abandonaram o checkout",
+   "agente": "Relacionamento",
+   "resp": "Delaine",
+   "status": "afazer"
+  },
+  {
+   "id": "t03",
+   "titulo": "Preço R$ 297 na página (12x de R$ 30,54) e checkout 192147: feito pela Delaine em 12/10",
+   "agente": "Estratégia e Copy",
+   "resp": "Delaine",
+   "status": "feito"
+  },
+  {
+   "id": "t04",
+   "titulo": "Aprovar a ficha oficial do Agenda Certa e decidir as 17 pendências (PDF enviado em 12/10)",
+   "agente": "Diretor",
+   "resp": "Delaine",
+   "status": "aprovacao"
+  },
+  {
+   "id": "t05",
+   "titulo": "Montar a campanha única [AC][VENDAS]: Instagram, 35 a 65 anos, 4 anúncios, R$ 80 a 100/dia",
+   "agente": "Mídia e Dados",
+   "resp": "Claude",
+   "status": "aprovacao"
+  },
+  {
+   "id": "t06",
+   "titulo": "Gravar 1 vídeo novo no ângulo \"o paciente certo precisa encontrar você\"",
+   "agente": "Produção",
+   "resp": "Delaine",
+   "status": "afazer"
+  },
+  {
+   "id": "t07",
+   "titulo": "Renomear campanhas do projeto social para [SOC][ALC], [SOC][ENG], [SOC][MSG]",
+   "agente": "Mídia e Dados",
+   "resp": "Cláudio",
+   "status": "afazer"
+  },
+  {
+   "id": "t08",
+   "titulo": "Anúncios do projeto social rodando sem publicar no feed do perfil",
+   "agente": "Mídia e Dados",
+   "resp": "Cláudio",
+   "status": "afazer"
+  },
+  {
+   "id": "t09",
+   "titulo": "Toda segunda: informar seguidores novos e atendimentos da igreja",
+   "agente": "Mídia e Dados",
+   "resp": "Delaine",
+   "status": "afazer"
+  },
+  {
+   "id": "t10",
+   "titulo": "Skill do Diretor (briefing → agentes → revisão → pacote)",
+   "agente": "Diretor",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t11",
+   "titulo": "Skill de Relacionamento (recuperação e atendimento no WhatsApp)",
+   "agente": "Relacionamento",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t12",
+   "titulo": "Skill de Revisão (posicionamento, conselho, LGPD, fatos)",
+   "agente": "Revisão",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t13",
+   "titulo": "Réguas de alcance, engajamento, mensagens e seguidores na skill de tráfego",
+   "agente": "Mídia e Dados",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t14",
+   "titulo": "Diagnóstico das vendas de 90 dias por anúncio, idade e posicionamento",
+   "agente": "Mídia e Dados",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t15",
+   "titulo": "Decidir: quem abandonou o checkout a R$ 197 recebe R$ 197 com prazo ou o preço novo?",
+   "agente": "Relacionamento",
+   "resp": "Delaine",
+   "status": "aprovacao"
+  },
+  {
+   "id": "t16",
+   "titulo": "Ficha do projeto social da igreja (público, ação, tom, limites)",
+   "agente": "Diretor",
+   "resp": "Claude",
+   "status": "afazer"
+  },
+  {
+   "id": "t17",
+   "titulo": "Subir o guia \"Do anúncio à agenda\" no Drive e no ManyChat (o \"Comenta AGENDA\" está sem destino)",
+   "agente": "Estratégia e Copy",
+   "resp": "Cláudio",
+   "status": "afazer"
+  },
+  {
+   "id": "t18",
+   "titulo": "Pacote final R$ 297 (PDF de 12/10, noite): Delaine aprova peças e frases; Cláudio faz o pré-voo e sobe",
+   "agente": "Diretor",
+   "resp": "Claude",
+   "status": "aprovacao"
+  },
+  {
+   "id": "t19",
+   "titulo": "Ajustar a página nova para R$ 297, bloco a bloco",
+   "agente": "Estratégia e Copy",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t20",
+   "titulo": "Criativos: A1 e A2 recortados (sem \"atrair mais pacientes\") e A3 feed/stories",
+   "agente": "Produção",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t21",
+   "titulo": "Revisão do pacote R$ 297: 2 voltas, aprovado com ajustes",
+   "agente": "Revisão",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t22",
+   "titulo": "Respostas automáticas do WhatsApp para quem pergunta do evento da igreja",
+   "agente": "Relacionamento",
+   "resp": "Claude",
+   "status": "fazendo"
+  },
+  {
+   "id": "t23",
+   "titulo": "Ler as conversas do WhatsApp e mapear dúvidas e objeções",
+   "agente": "Relacionamento",
+   "resp": "Claude",
+   "status": "afazer"
+  },
+  {
+   "id": "t24",
+   "titulo": "Liberar o Instagram @delainenogueiraa no token (BM: ativo + permissões)",
+   "agente": "Mídia e Dados",
+   "resp": "Cláudio",
+   "status": "afazer"
+  },
+  {
+   "id": "t25",
+   "titulo": "Conectar a Greenn: vendas, checkout abandonado e Pix pendente",
+   "agente": "Mídia e Dados",
+   "resp": "Cláudio",
+   "status": "afazer"
+  },
+  {
+   "id": "t26",
+   "titulo": "PRIORIDADE 1 · Greenn: nome \"Agenda Certa — Delaine Nogueira\", R$ 297, parcelas, opt-in de WhatsApp, UTMs do link",
+   "agente": "Mídia e Dados",
+   "resp": "Cláudio",
+   "status": "aprovacao"
+  },
+  {
+   "id": "t27",
+   "titulo": "Gravar o vídeo do A4 (roteiro com 3 ganchos no pacote): entra no dia 7",
+   "agente": "Produção",
+   "resp": "Delaine",
+   "status": "afazer"
+  },
+  {
+   "id": "t28",
+   "titulo": "Cancelado: análise da CA [MAPA] (não é nossa conta; trabalhamos só na Conta 002)",
+   "agente": "Estratégia e Copy",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t29",
+   "titulo": "Inventário de 314 vídeos com nota de áudio. Melhor para saúde: convênio → particular (áudio 8,1)",
+   "agente": "Produção",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t30",
+   "titulo": "Descartado: artes desenhadas (verde, Playfair) rejeitadas pela Delaine. Refazer em formato nativo, depois da pesquisa",
+   "agente": "Produção",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t31",
+   "titulo": "Sala dos Agentes online no GitHub Pages",
+   "agente": "Diretor",
+   "resp": "Claude",
+   "status": "fazendo"
+  },
+  {
+   "id": "t32",
+   "titulo": "Pesquisa: 30 anúncios com 30+ dias no ar. Vence a pessoa falando para a câmera com texto nativo (16 de 30)",
+   "agente": "Estratégia e Copy",
+   "resp": "Claude",
+   "status": "feito"
+  },
+  {
+   "id": "t33",
+   "titulo": "Grade final aprovada na Revisão (Volta 5): A1, F2, F4, F6. Falta a aprovação da Delaine",
+   "agente": "Produção",
+   "resp": "Claude",
+   "status": "aprovacao"
+  },
+  {
+   "id": "t34",
+   "titulo": "Montar o curso Agenda Certa no Greenn Club (módulos, aulas, materiais); Delaine arrasta os vídeos",
+   "agente": "Diretor",
+   "resp": "Claude",
+   "status": "aprovacao"
+  },
+  {
+   "id": "t35",
+   "titulo": "Analisar a página ao vivo e propor ajustes (utm organic fixo, certificado, 6 vs 9 etapas, WhatsApp sem aula)",
+   "agente": "Estratégia e Copy",
+   "resp": "Claude",
+   "status": "afazer"
+  }
+ ],
+ "anuncios": [
+  {
+   "checks": {
+    "c1": true,
+    "q2": true,
+    "q3": true,
+    "r1": true,
+    "r2": true,
+    "s1": true,
+    "s2": true,
+    "s3": true,
+    "s4": true
+   },
+   "formato": "Vídeo AD0011 recortado",
+   "nome": "A1 · controle",
+   "nota": "Gancho não chama a profissão e a cartela final não tem \"Toque em Saiba mais\".",
+   "ordem": 1,
+   "id": "A1"
+  },
+  {
+   "checks": {
+    "c1": true,
+    "c2": true,
+    "c3": true,
+    "c4": true,
+    "q1": true,
+    "q3": true,
+    "q4": true,
+    "r1": true,
+    "r2": true,
+    "s1": true,
+    "s2": true,
+    "s3": true,
+    "s4": true
+   },
+   "formato": "Vídeo falando para a câmera, 52 s",
+   "nome": "F2 · convênio → particular",
+   "nota": "Vídeo original em 480 px, ampliado. A Delaine decide se a imagem está boa o suficiente.",
+   "ordem": 2,
+   "id": "F2"
+  },
+  {
+   "checks": {
+    "c1": true,
+    "c2": true,
+    "c3": true,
+    "c4": true,
+    "q1": true,
+    "q2": true,
+    "q3": true,
+    "q4": true,
+    "r1": true,
+    "r2": true,
+    "s1": true,
+    "s2": true,
+    "s3": true,
+    "s4": true
+   },
+   "formato": "Estático 9:16 + 4:5",
+   "nome": "F4 · story sobre foto",
+   "ordem": 3,
+   "id": "F4"
+  },
+  {
+   "checks": {
+    "c1": true,
+    "c2": true,
+    "c3": true,
+    "q1": true,
+    "q2": true,
+    "q3": true,
+    "q4": true,
+    "r1": true,
+    "r2": true,
+    "s1": true,
+    "s2": true,
+    "s3": true,
+    "s4": true
+   },
+   "formato": "Estático 4:5",
+   "nome": "F6 · estilo tweet",
+   "nota": "A arte não tem chamada. O botão Saiba mais do Meta resolve; marque c4 se concordar.",
+   "ordem": 4,
+   "id": "F6"
   }
  ],
  "kpis": [
@@ -217,6 +573,60 @@
  "atividade": [
   {
    "agente": "Diretor",
+   "quando": "2026-10-12T21:00",
+   "texto": "Checklist de conferência antes de subir anúncio: 16 itens em 4 grupos, já no dashboard.",
+   "id": "a23"
+  },
+  {
+   "agente": "Revisão",
+   "quando": "2026-10-12T20:00",
+   "texto": "Volta 5 sem reprova: F2, F4 e F6 aprovados. O F4 passou depois de trocar a frase que o Meta reprovaria.",
+   "id": "a22"
+  },
+  {
+   "agente": "Produção",
+   "quando": "2026-10-12T19:20",
+   "texto": "3 criativos nativos no padrão da pesquisa: vídeo falando para a câmera com caixinhas, story sobre foto e tweet. Sem verde, sem logo.",
+   "id": "a21"
+  },
+  {
+   "agente": "Diretor",
+   "quando": "2026-10-12T19:00",
+   "texto": "Página a R$ 297 registrada (texto + tela). 32 aulas organizadas no Downloads, em 8 módulos.",
+   "id": "a20"
+  },
+  {
+   "agente": "Estratégia e Copy",
+   "quando": "2026-10-12T17:50",
+   "texto": "Pesquisa na Biblioteca de Anúncios: nenhum curso vendido pela própria autora usa arte de marca. Vence o vídeo falando para a câmera.",
+   "id": "a19"
+  },
+  {
+   "agente": "Diretor",
+   "quando": "2026-10-12T17:00",
+   "texto": "Regra nova: nenhum criativo sem pesquisa do que converte, e o formato precisa parecer nativo do Instagram.",
+   "id": "a17"
+  },
+  {
+   "agente": "Produção",
+   "quando": "2026-10-12T16:55",
+   "texto": "Inventário: 472 vídeos achados, 314 com áudio medido, 68 com a Delaine falando. 1 serve direto para saúde.",
+   "id": "a18"
+  },
+  {
+   "agente": "Diretor",
+   "quando": "2026-10-12T16:40",
+   "texto": "Ordem de destravamento: 6 passos, cerca de 3 h até a campanha no ar. O primeiro é a Greenn.",
+   "id": "a16"
+  },
+  {
+   "agente": "Produção",
+   "quando": "2026-10-12T16:30",
+   "texto": "3 artes com foto da Delaine (ensaio Delaine 55), aprovadas na auditoria sem erros.",
+   "id": "a15"
+  },
+  {
+   "agente": "Diretor",
    "quando": "2026-10-12T15:00",
    "texto": "Vídeo A2 descartado pela Delaine (áudio ruim). Foco em imagem com foto dela e no que já converteu.",
    "id": "a14"
@@ -232,236 +642,6 @@
    "quando": "2026-10-12T13:50",
    "texto": "Pacote R$ 297 em 2 voltas: 1 reprova corrigida (A1, política do Meta). Aprovado com ajustes.",
    "id": "a12"
-  },
-  {
-   "agente": "Produção",
-   "quando": "2026-10-12T13:30",
-   "texto": "Vídeos AD0011 e AD0012 recortados: saíram \"atrair mais pacientes\" e \"mais clientes\". Arte do A3 feita com a tela do app.",
-   "id": "a11"
-  },
-  {
-   "agente": "Estratégia e Copy",
-   "quando": "2026-10-12T12:38",
-   "texto": "Ajustes da página a R$ 297. O checkout abre como outro produto (Academia do Tráfego) e a R$ 197.",
-   "id": "a08"
-  },
-  {
-   "agente": "Estratégia e Copy",
-   "quando": "2026-10-12T12:30",
-   "texto": "4 anúncios no ângulo paciente certo e roteiro do vídeo novo com 3 ganchos.",
-   "id": "a07"
-  },
-  {
-   "agente": "Relacionamento",
-   "quando": "2026-10-12T12:25",
-   "texto": "Sequência de recuperação para Pix, abandono e cartão recusado, e reabertura dos 17.",
-   "id": "a10"
-  },
-  {
-   "agente": "Mídia e Dados",
-   "quando": "2026-10-12T12:20",
-   "texto": "Estrutura da campanha única: Instagram, 35 a 65 anos, R$ 90/dia, regras de 7 dias.",
-   "id": "a09"
-  },
-  {
-   "agente": "Diretor",
-   "quando": "2026-10-12T11:10",
-   "texto": "Rotina de segunda agendada para as 8h.",
-   "id": "a06"
-  },
-  {
-   "agente": "Relacionamento",
-   "quando": "2026-10-12T10:40",
-   "texto": "Modelos de recuperação de checkout e de boas-vindas prontos.",
-   "id": "a05"
-  }
- ],
- "tarefas": [
-  {
-   "titulo": "Compra de teste no celular na página nova: preço e Pix/parcelamento batem com a página?",
-   "agente": "Produção",
-   "resp": "Cláudio",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Chamar no WhatsApp as 17 pessoas que abandonaram o checkout",
-   "agente": "Relacionamento",
-   "resp": "Delaine",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Subir o preço para R$ 297 na página e no checkout, com bump de R$ 97",
-   "agente": "Estratégia e Copy",
-   "resp": "Delaine",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Aprovar a ficha oficial do Agenda Certa e decidir as 17 pendências (PDF enviado em 12/10)",
-   "agente": "Diretor",
-   "resp": "Delaine",
-   "status": "aprovacao"
-  },
-  {
-   "titulo": "Montar a campanha única [AC][VENDAS]: Instagram, 35 a 65 anos, 4 anúncios, R$ 80 a 100/dia",
-   "agente": "Mídia e Dados",
-   "resp": "Claude",
-   "status": "aprovacao"
-  },
-  {
-   "titulo": "Gravar 1 vídeo novo no ângulo \"o paciente certo precisa encontrar você\"",
-   "agente": "Produção",
-   "resp": "Delaine",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Renomear campanhas do projeto social para [SOC][ALC], [SOC][ENG], [SOC][MSG]",
-   "agente": "Mídia e Dados",
-   "resp": "Cláudio",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Anúncios do projeto social rodando sem publicar no feed do perfil",
-   "agente": "Mídia e Dados",
-   "resp": "Cláudio",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Toda segunda: informar seguidores novos e atendimentos da igreja",
-   "agente": "Mídia e Dados",
-   "resp": "Delaine",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Skill do Diretor (briefing → agentes → revisão → pacote)",
-   "agente": "Diretor",
-   "resp": "Claude",
-   "status": "feito"
-  },
-  {
-   "titulo": "Skill de Relacionamento (recuperação e atendimento no WhatsApp)",
-   "agente": "Relacionamento",
-   "resp": "Claude",
-   "status": "feito"
-  },
-  {
-   "titulo": "Skill de Revisão (posicionamento, conselho, LGPD, fatos)",
-   "agente": "Revisão",
-   "resp": "Claude",
-   "status": "feito"
-  },
-  {
-   "titulo": "Réguas de alcance, engajamento, mensagens e seguidores na skill de tráfego",
-   "agente": "Mídia e Dados",
-   "resp": "Claude",
-   "status": "feito"
-  },
-  {
-   "titulo": "Diagnóstico das vendas de 90 dias por anúncio, idade e posicionamento",
-   "agente": "Mídia e Dados",
-   "resp": "Claude",
-   "status": "feito"
-  },
-  {
-   "titulo": "Decidir: quem abandonou o checkout a R$ 197 recebe R$ 197 com prazo ou o preço novo?",
-   "agente": "Relacionamento",
-   "resp": "Delaine",
-   "status": "aprovacao"
-  },
-  {
-   "titulo": "Ficha do projeto social da igreja (público, ação, tom, limites)",
-   "agente": "Diretor",
-   "resp": "Claude",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Subir o guia \"Do anúncio à agenda\" no Drive e no ManyChat (o \"Comenta AGENDA\" está sem destino)",
-   "agente": "Estratégia e Copy",
-   "resp": "Cláudio",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Pacote R$ 297 revisado: Delaine aprova peças e pendências, Cláudio aprova Greenn e estrutura (PDF de 12/10)",
-   "agente": "Diretor",
-   "resp": "Claude",
-   "status": "aprovacao"
-  },
-  {
-   "titulo": "Ajustar a página nova para R$ 297, bloco a bloco",
-   "agente": "Estratégia e Copy",
-   "resp": "Claude",
-   "status": "feito"
-  },
-  {
-   "titulo": "Criativos: A1 e A2 recortados (sem \"atrair mais pacientes\") e A3 feed/stories",
-   "agente": "Produção",
-   "resp": "Claude",
-   "status": "feito"
-  },
-  {
-   "titulo": "Revisão do pacote R$ 297: 2 voltas, aprovado com ajustes",
-   "agente": "Revisão",
-   "resp": "Claude",
-   "status": "feito"
-  },
-  {
-   "titulo": "Respostas automáticas do WhatsApp para quem pergunta do evento da igreja",
-   "agente": "Relacionamento",
-   "resp": "Claude",
-   "status": "fazendo"
-  },
-  {
-   "titulo": "Ler as conversas do WhatsApp e mapear dúvidas e objeções",
-   "agente": "Relacionamento",
-   "resp": "Claude",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Liberar o Instagram @delainenogueiraa no token (BM: ativo + permissões)",
-   "agente": "Mídia e Dados",
-   "resp": "Cláudio",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Conectar a Greenn: vendas, checkout abandonado e Pix pendente",
-   "agente": "Mídia e Dados",
-   "resp": "Cláudio",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Greenn: renomear o produto para \"Agenda Certa — Delaine Nogueira\", preço R$ 297 e corrigir as UTMs do link",
-   "agente": "Mídia e Dados",
-   "resp": "Cláudio",
-   "status": "aprovacao"
-  },
-  {
-   "titulo": "Gravar o vídeo do A4 (roteiro com 3 ganchos no pacote): entra no dia 7",
-   "agente": "Produção",
-   "resp": "Delaine",
-   "status": "afazer"
-  },
-  {
-   "titulo": "Cancelado: análise da CA [MAPA] (não é nossa conta; trabalhamos só na Conta 002)",
-   "agente": "Estratégia e Copy",
-   "resp": "Claude",
-   "status": "feito"
-  },
-  {
-   "titulo": "Inventário dos vídeos gravados: áudio, tema e trechos aproveitáveis",
-   "agente": "Produção",
-   "resp": "Claude",
-   "status": "fazendo"
-  },
-  {
-   "titulo": "3 artes com foto da Delaine (autoridade, dor literal, rosto e app) no lugar do vídeo A2",
-   "agente": "Produção",
-   "resp": "Claude",
-   "status": "fazendo"
-  },
-  {
-   "titulo": "Sala dos Agentes online no GitHub Pages",
-   "agente": "Diretor",
-   "resp": "Claude",
-   "status": "fazendo"
   }
  ]
 }
