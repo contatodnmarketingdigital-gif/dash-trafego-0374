@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sala dos Agentes · Luminar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Sala dos agentes: noite verde da marca, dourado como luz de trabalho */
+:root{
+  --bg:#0c1f18; --bg2:#10291f; --card:#13301f; --card2:#173a28; --line:#24493a;
+  --cream:#f3ead8; --muted:#a9b8ae; --gold:#e3c37f; --gold2:#c9a35a;
+  --ok:#7fd3a6; --wait:#f0b84a; --idle:#6f8a7c; --bad:#f08a8a;
+  --display:"Playfair Display",Georgia,serif; --body:"Manrope","Segoe UI",system-ui,sans-serif; --mono:"JetBrains Mono",Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(1200px 600px at 80% -10%,#1b4a35 0%,transparent 60%),var(--bg);color:var(--cream);font-family:var(--body);font-size:15px;line-height:1.55;min-height:100vh}
+.wrap{max-width:1220px;margin:0 auto;padding:28px 20px 72px;display:flex;flex-direction:column;gap:44px}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.12;text-wrap:balance;font-weight:700}
+h1{font-size:clamp(30px,4.6vw,50px)}
+h2{font-size:clamp(22px,2.6vw,28px)}
+h3{font-size:19px}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* topo */
+.top{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:end}
+.top .lede{margin-top:12px;max-width:58ch;font-size:16px}
+.goal{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.goal .big{font-family:var(--display);font-size:40px;line-height:1}
+.bar{height:10px;border-radius:5px;background:#0a1912;overflow:hidden}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--gold2),var(--gold));min-width:6px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:11.5px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:#0b1c15}
+.chip b{color:var(--cream);font-weight:500}
+.chip.bad b{color:var(--bad)} .chip.ok b{color:var(--ok)}
+
+/* campanha */
+.camp{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:20px}
+.camp .diag{font-size:16px;max-width:80ch}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;counter-reset:s}
+.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.step .dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-size:12px;border:2px solid var(--idle);color:var(--idle)}
+.step.feito .dot{background:var(--gold);border-color:var(--gold);color:#1a1405}
+.step.fazendo .dot{border-color:var(--ok);color:var(--ok);animation:pulse 1.6s infinite}
+.step.esperando .dot{border-color:var(--wait);color:var(--wait)}
+.step.esperando{border-color:#5a4a22}
+.step b{font-size:13.5px;line-height:1.3}
+.step small{font-size:12px;color:var(--muted);line-height:1.4}
+.owner{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.step.esperando .owner{color:var(--wait)}
+
+/* agentes */
+.agrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.agent{background:linear-gradient(170deg,var(--card2) 0%,var(--card) 60%);border:1px solid var(--line);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0;position:relative;overflow:hidden}
+.agent.work{border-color:#2f6b4f;box-shadow:0 0 0 1px #2f6b4f inset,0 18px 40px -24px #7fd3a655}
+.ahead{display:flex;gap:14px;align-items:center}
+.avatar{position:relative;width:58px;height:58px;flex:none}
+.avatar .core{position:absolute;inset:6px;border-radius:50%;background:#0b1c15;border:1px solid var(--line);display:grid;place-items:center}
+.avatar svg.ic{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.avatar svg.ring{position:absolute;inset:0;width:58px;height:58px}
+.agent.work .ring{animation:spin 2.4s linear infinite}
+.state{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600}
+.state i{width:8px;height:8px;border-radius:50%;background:var(--idle)}
+.agent.work .state{color:var(--ok)} .agent.work .state i{background:var(--ok);animation:pulse 1.6s infinite}
+.agent.wait .state{color:var(--wait)} .agent.wait .state i{background:var(--wait)}
+.agent.queue .state{color:var(--muted)}
+.now{background:#0b1c15;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13.5px;display:flex;flex-direction:column;gap:4px}
+.now .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.typing{display:inline-flex;gap:3px;margin-left:6px;vertical-align:middle}
+.typing span{width:4px;height:4px;border-radius:50%;background:var(--ok);animation:blink 1.2s infinite}
+.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+.counts{display:flex;gap:6px;flex-wrap:wrap}
+.counts span{font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:6px;background:#0b1c15;color:var(--muted)}
+.kv{font-size:13.5px;display:flex;flex-direction:column;gap:2px}
+.kv .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.align{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:1px}
+.align.sim{background:#1d4a34;color:var(--ok)} .align.parcial{background:#4a3c1a;color:var(--wait)}
+.improve{border-top:1px dashed var(--line);padding-top:10px;font-size:13.5px}
+.improve b{color:var(--gold);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tags span{font-family:var(--mono);font-size:10.5px;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:1px 6px}
+
+/* projetos e feed */
+.two{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px}
+.panel{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:18px}
+.kgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+.k{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--idle);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.k.ok{border-left-color:var(--ok)} .k.mid{border-left-color:var(--wait)} .k.no{border-left-color:var(--bad)}
+.k .p{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.k .v{font-family:var(--display);font-size:24px}
+.k small{font-size:12px;color:var(--muted)}
+.feed{list-style:none;margin:12px 0 0;padding:0}
+.feed li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.feed li:last-child{border-bottom:0}
+.feed li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:7px}
+.feed b{color:var(--gold);font-weight:600}
+footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 #7fd3a688}100%{box-shadow:0 0 0 9px transparent}}
+@keyframes blink{0%,80%,100%{opacity:.2}40%{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+@media (max-width:1080px){.steps{grid-template-columns:repeat(4,minmax(0,1fr))}.agrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.top,.two{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.agrid{grid-template-columns:1fr}.kgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div>
+    <p class="eyebrow">Luminar · agência de IA</p>
+    <h1>Sala dos Agentes</h1>
+    <p class="lede muted">Seis agentes, cada um responsável por um número. Aqui você vê o que cada um está fazendo agora, o que já entregou e o que trava a campanha.</p>
+  </div>
+  <div class="goal" aria-label="Meta do Agenda Certa">
+    <p class="eyebrow">Meta · Agenda Certa</p>
+    <div><span class="big num" id="fat">—</span> <span class="muted" id="alvo"></span></div>
+    <div class="bar"><span id="bar" style="width:0"></span></div>
+    <div class="chips" id="chips"></div>
+  </div>
+</header>
+
+<section class="camp">
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <p class="eyebrow">Caminho crítico</p>
+    <h2 id="c-nome">Campanha</h2>
+    <p class="diag" id="c-diag"></p>
+  </div>
+  <ol class="steps" id="steps"></ol>
+</section>
+
+<section>
+  <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+    <p class="eyebrow">A equipe</p>
+    <h2>Quem está fazendo o quê, e se está alinhado</h2>
+  </div>
+  <div class="agrid" id="agents"></div>
+</section>
+
+<section class="two">
+  <div class="panel"><p class="eyebrow">Projetos · cada um pela sua régua</p><div class="kgrid" id="kpis"></div></div>
+  <div class="panel"><p class="eyebrow">Últimas entregas</p><ul class="feed" id="feed"></ul></div>
+</section>
+
+<footer id="foot">Dados: Marketing API do Meta (Conta 002) e Central Luminar.</footer>
+</div>
+
+<script>
+const ICONS={
+  bussola:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+  pena:'<path d="M20 4c-6 0-11 5-12 11l-3 5 5-3c6-1 10-6 10-13z"/><path d="M8 15l6-6"/>',
+  moldura:'<rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M20.5 16l-5-5-8 8"/>',
+  grafico:'<path d="M4 20V4"/><path d="M4 20h16"/><path d="M7 15l4-4 3 3 5-6"/>',
+  escudo:'<path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/>',
+  conversa:'<path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/>'
+};
+const BRL=v=>"R$ "+Number(v).toLocaleString("pt-BR",{minimumFractionDigits:v<10?2:0,maximumFractionDigits:2});
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ZONA={"na meta":"ok","ajustar":"mid","revisar":"no"};
+const EST={feito:"✓",fazendo:"•",esperando:"!",fila:""};
+
+fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
+  const m=d.meta;
+  document.getElementById("fat").textContent=BRL(m.faturamento);
+  document.getElementById("alvo").textContent="de "+BRL(m.alvo);
+  document.getElementById("bar").style.width=Math.min(100,m.faturamento/m.alvo*100)+"%";
+  document.getElementById("chips").innerHTML=
+    `<span class="chip"><b>${m.vendas}</b> vendas</span><span class="chip"><b>${BRL(m.preco)}</b> preço novo</span>`+
+    `<span class="chip bad">CPA hoje <b>${BRL(m.cpa_atual)}</b></span><span class="chip ok">teto <b>${BRL(m.cpa_teto)}</b> · alvo <b>${BRL(m.cpa_alvo)}</b></span>`;
+
+  const c=d.campanha;
+  document.getElementById("c-nome").textContent=c.nome;
+  document.getElementById("c-diag").textContent=c.diagnostico;
+  document.getElementById("steps").innerHTML=c.passos.map((p,i)=>`<li class="step ${p.estado}">
+    <span class="dot">${EST[p.estado]||i+1}</span><span class="owner">${esc(p.dono)}</span><b>${esc(p.t)}</b><small>${esc(p.d)}</small></li>`).join("");
+
+  const T=d.tarefas||[];
+  document.getElementById("agents").innerHTML=d.agentes.map(a=>{
+    const mine=T.filter(t=>t.agente===a.nome);
+    const f=s=>mine.filter(t=>t.status===s);
+    const work=f("fazendo"),wait=f("aprovacao"),q=f("afazer"),done=f("feito");
+    const cls=work.length?"work":wait.length?"wait":"queue";
+    const label=work.length?"Trabalhando":wait.length?"Esperando aprovação":q.length?"Na fila":"Em espera";
+    const cur=work[0]||wait[0]||q[0];
+    return `<article class="agent ${cls}">
+      <div class="ahead">
+        <div class="avatar"><svg class="ring" viewBox="0 0 58 58"><circle cx="29" cy="29" r="27" fill="none" stroke="#24493a" stroke-width="2"/><circle cx="29" cy="29" r="27" fill="none" stroke="${cls==="work"?"#7fd3a6":cls==="wait"?"#f0b84a":"#6f8a7c"}" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="${cls==="work"?"60 110":"170 0"}"/></svg>
+          <div class="core"><svg class="ic" viewBox="0 0 24 24">${ICONS[a.icone]||""}</svg></div></div>
+        <div><h3>${esc(a.nome)}</h3><span class="state"><i></i>${label}</span></div>
+      </div>
+      <div class="now"><span class="lbl">${work.length?"Agora":wait.length?"Aguardando":"Próximo"}</span><span>${cur?esc(cur.titulo):"Sem tarefa aberta"}${work.length?'<span class="typing"><span></span><span></span><span></span></span>':""}</span></div>
+      <div class="counts"><span>${work.length} fazendo</span><span>${wait.length} aprovação</span><span>${q.length} fila</span><span>${done.length} feitas</span></div>
+      <div class="kv"><span class="lbl">Papel</span><span>${esc(a.papel)}</span></div>
+      <div class="kv"><span class="lbl">Dono do número</span><span>${esc(a.numero)}</span></div>
+      <div class="kv"><span class="lbl">Leitura <span class="align ${a.alinhado}">${a.alinhado==="sim"?"alinhado":"parcial"}</span></span><span>${esc(a.leitura)}</span></div>
+      <p class="improve"><b>Melhorar:</b> ${esc(a.melhorar)}</p>
+      <div class="tags">${a.skills.map(s=>`<span>${esc(s)}</span>`).join("")}</div>
+    </article>`;}).join("");
+
+  document.getElementById("kpis").innerHTML=(d.kpis||[]).map(k=>`<div class="k ${ZONA[k.zona]||""}">
+    <span class="p">${esc(k.projeto)} · ${esc(k.objetivo)}</span><span class="v num">${BRL(k.valor)}</span>
+    <small>${esc(k.regua)} · meta ${BRL(k.meta)} · ${esc(k.zona)}</small></div>`).join("");
+  document.getElementById("feed").innerHTML=(d.atividade||[]).map(a=>`<li><span><b>${esc(a.agente)}</b> · ${esc(a.texto)}</span></li>`).join("");
+  document.getElementById("foot").textContent="Atualizado em "+d.atualizado.split("-").reverse().join("/")+" · Dados: Marketing API do Meta (Conta 002) e Central Luminar.";
+}).catch(()=>{document.getElementById("c-diag").textContent="Não foi possível carregar os dados agora.";});
+</script>
+</body>
+</html>
