@@ -266,6 +266,7 @@
 
 
 
+
   <!-- ============ PAINEL 10 — VISÃO GERAL E PRODUTOS ============ -->
   <div class="viz-root">
 <style>
@@ -386,12 +387,74 @@
     #vtip{position:fixed;pointer-events:none;z-index:50;background:#fff;border:1px solid var(--ring);box-shadow:0 8px 22px rgba(16,40,90,.16);border-radius:10px;padding:8px 11px;font-size:12.5px;color:var(--ink2);display:none;max-width:280px}
     #vtip div:first-child{color:var(--ink);font-weight:750;margin-bottom:2px}
   </style>
+
+<style>
+.socios{background:#fff;border:1px solid var(--ring);border-radius:20px;padding:22px 22px 18px;margin:4px 0 18px;box-shadow:0 6px 24px rgba(16,40,90,.06)}
+@media(max-width:620px){.socios{padding:16px 14px 14px}}
+.sc-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px 16px;margin-bottom:16px}
+.sc-kick{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--bp)}
+.sc-head h2{margin:2px 0 0;font-size:24px;letter-spacing:-.01em}
+.sc-fonte{font-size:12px;color:var(--muted);max-width:420px}
+.sc-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media(max-width:820px){.sc-kpis{grid-template-columns:1fr}}
+.sc-k{border-radius:16px;padding:16px 18px;border:1px solid var(--line);min-width:0}
+.sc-k .lab{font-size:12.5px;font-weight:750;text-transform:uppercase;letter-spacing:.04em;color:inherit}
+.sc-n{font-size:clamp(28px,4.2vw,40px);font-weight:850;letter-spacing:-.02em;line-height:1.1;margin:6px 0 4px;font-variant-numeric:tabular-nums}
+.sc-s{font-size:12.5px;opacity:.85}
+.sc-k .dl{margin-top:8px;display:inline-block}
+.sc-k.bruto{background:var(--bp);border-color:var(--bp);color:#fff}
+.sc-k.bruto .dl,.sc-k.traf .dl{color:rgba(255,255,255,.88)}
+.sc-k.traf{background:#0b1f44;border-color:#0b1f44;color:#fff}
+.sc-k.sobra{background:#eaf6ee;border-color:#bfe3c8;color:#063d1a}
+.sc-k.sobra .sc-n{color:#0a7a2f}
+.sc-mix{margin:16px 0 4px}
+.sc-mixbar{display:flex;height:18px;border-radius:999px;overflow:hidden;background:#eef1f6}
+.sc-tr{background:#0b1f44;display:block;height:100%}.sc-so{background:#22a35a;display:block;height:100%}.sc-ex{background:#d03b3b;display:block;height:100%}
+.sc-mixleg,.sc-leg{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--ink2);margin-top:8px;align-items:center}
+.sc-mixleg i,.sc-leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.socios i.tr{background:#0b1f44}.socios i.so{background:#22a35a}.socios i.ex{background:#d03b3b}
+.sc-cem{margin-left:auto}
+@media(max-width:620px){.sc-cem{margin-left:0}}
+.sc-sub{font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:20px 0 8px}
+.sc-rows{display:flex;flex-direction:column;gap:10px}
+.sc-row{display:grid;grid-template-columns:190px minmax(0,1fr) 330px;gap:16px;align-items:center;padding:12px 14px;border:1px solid var(--line);border-radius:14px}
+@media(max-width:900px){.sc-row{grid-template-columns:1fr;gap:10px}}
+.sc-nome{display:flex;gap:10px;align-items:center;min-width:0}
+.sc-nome i{width:12px;height:12px;border-radius:4px;flex:none}
+.sc-nome b{display:block;font-size:15px}.sc-nome small{display:block;font-size:11.5px;color:var(--muted)}
+.sc-trilho{display:flex;height:22px;border-radius:7px;overflow:hidden;background:#f2f4f8}
+.sc-tag{display:inline-block;font-size:12px;color:var(--ink2);margin-top:5px}
+.sc-tag.neg{color:#b42318;font-weight:700}.sc-tag.neu{color:var(--muted)}
+.sc-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:right}
+@media(max-width:900px){.sc-nums{text-align:left}}
+.sc-nums small{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.sc-nums b{font-size:16px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sc-nums b.pos{color:#0a7a2f}.sc-nums b.neg{color:#b42318}
+</style>
 </div>
   <div id="vtip"></div>
   <div class="viz-root">
   <div class="panel active" id="pr"><div class="perbar" role="tablist" aria-label="Período"><button data-per="mes" class="on">Novembro até 15/11</button><button data-per="mesant" class="">Outubro completo</button><button data-per="7d" class="">Últimos 7 dias · 09/11 a 15/11</button></div>
   <div class="perv" data-per="mes">
     <div class="mhead"><h2>Visão geral de novembro</h2><span>01/11 a 15/11/2026 · comparado com os mesmos dias de outubro</span></div>
+
+    <div class="socios">
+      <div class="sc-head"><div><div class="sc-kick">Visão dos sócios</div><h2>Faturamento × tráfego em novembro</h2></div>
+        <div class="sc-fonte">Venda real na Greenn + Voomp · tráfego = gasto do Meta com imposto (× 1,1383)</div></div>
+      <div class="sc-kpis">
+        <div class="sc-k bruto"><div class="lab">Faturamento bruto</div><div class="sc-n">R$ 169,3 mil</div><div class="sc-s">vendas novas + parcelas da Pós</div><span class="dl up">▲ 51% vs outubro (mesmos dias)</span></div>
+        <div class="sc-k traf"><div class="lab">Investido em tráfego</div><div class="sc-n">R$ 26,9 mil</div><div class="sc-s">16% do faturamento · com o imposto do Meta (R$ 23,6 mil no Gerenciador)</div><span class="dl ">▲ 39% vs outubro (mesmos dias)</span></div>
+        <div class="sc-k sobra"><div class="lab">Faturamento sem tráfego</div><div class="sc-n">R$ 142,4 mil</div><div class="sc-s">bruto menos tráfego · antes de taxas, comissão e impostos</div><span class="dl up">▲ 54% vs outubro (mesmos dias)</span></div>
+      </div>
+      <div class="sc-mix">
+        <div class="sc-mixbar"><span class="sc-tr" style="width:15.89%"></span><span class="sc-so" style="width:84.11%"></span></div>
+        <div class="sc-mixleg"><span><i class="tr"></i>Tráfego 16%</span><span><i class="so"></i>Fica sem tráfego 84%</span>
+          <span class="sc-cem">De cada <b>R$ 100</b> faturados, <b>R$ 16</b> foram para anúncio</span></div>
+      </div>
+      <div class="sc-sub">Por produto</div>
+      <div class="sc-rows"><div class="sc-row"><div class="sc-nome"><i style="background:var(--s2)"></i><div><b>Pós-graduação</b><small>Black + venda direta · com parcelas</small></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:3.74%"></span><span class="sc-so" style="width:96.26%"></span><span class="sc-ex" style="width:0.00%"></span></div><span class="sc-tag">4% foi para tráfego</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 139,2 mil</b></div><div><small>Tráfego</small><b>R$ 5,2 mil</b></div><div><small>Sem tráfego</small><b class="pos">R$ 134,0 mil</b></div></div></div><div class="sc-row"><div class="sc-nome"><i style="background:var(--s1)"></i><div><b>Vagal</b></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:13.57%"></span><span class="sc-so" style="width:3.96%"></span><span class="sc-ex" style="width:0.00%"></span></div><span class="sc-tag">77% foi para tráfego</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 24,4 mil</b></div><div><small>Tráfego</small><b>R$ 18,9 mil</b></div><div><small>Sem tráfego</small><b class="pos">R$ 5,5 mil</b></div></div></div><div class="sc-row"><div class="sc-nome"><i style="background:var(--s4)"></i><div><b>tDCS</b></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:1.87%"></span><span class="sc-so" style="width:1.37%"></span><span class="sc-ex" style="width:0.00%"></span></div><span class="sc-tag">58% foi para tráfego</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 4,5 mil</b></div><div><small>Tráfego</small><b>R$ 2,6 mil</b></div><div><small>Sem tráfego</small><b class="pos">R$ 1,9 mil</b></div></div></div><div class="sc-row"><div class="sc-nome"><i style="background:var(--s5)"></i><div><b>Outros</b><small>vendas sem anúncio</small></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:0.00%"></span><span class="sc-so" style="width:0.86%"></span><span class="sc-ex" style="width:0.00%"></span></div><span class="sc-tag">sem tráfego</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 1,2 mil</b></div><div><small>Tráfego</small><b>R$ 0</b></div><div><small>Sem tráfego</small><b class="pos">R$ 1,2 mil</b></div></div></div><div class="sc-row"><div class="sc-nome"><i style="background:var(--s3)"></i><div><b>Grupo de Estudo</b></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:0.00%"></span><span class="sc-so" style="width:0.00%"></span><span class="sc-ex" style="width:0.15%"></span></div><span class="sc-tag neu">captação · sem venda direta no período</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 0</b></div><div><small>Tráfego</small><b>R$ 203</b></div><div><small>Sem tráfego</small><b class="neg">− R$ 203</b></div></div></div></div>
+      <div class="sc-leg"><span><i class="tr"></i>Tráfego</span><span><i class="so"></i>Sem tráfego</span><span><i class="ex"></i>Tráfego acima do faturado</span></div>
+    </div>
     <div class="hero">
       <div class="hcard blue"><div class="lab">Investido em novembro · todos os produtos</div><div class="hnum">R$ 23,6 mil</div>
         <span class="dl ">▲ 39% vs outubro (mesmos dias)</span><div class="legend" style="margin-top:12px">5 produtos com investimento no mês</div></div>
@@ -447,6 +510,24 @@
   </div>
   <div class="perv" data-per="mesant">
     <div class="mhead"><h2>Visão geral de outubro</h2><span>01/10 a 31/10/2026 · comparado com setembro inteiro</span></div>
+
+    <div class="socios">
+      <div class="sc-head"><div><div class="sc-kick">Visão dos sócios</div><h2>Faturamento × tráfego em outubro</h2></div>
+        <div class="sc-fonte">Venda real na Greenn + Voomp · tráfego = gasto do Meta com imposto (× 1,1383)</div></div>
+      <div class="sc-kpis">
+        <div class="sc-k bruto"><div class="lab">Faturamento bruto</div><div class="sc-n">R$ 310,0 mil</div><div class="sc-s">vendas novas + parcelas da Pós</div><span class="dl up">▲ 187% vs setembro</span></div>
+        <div class="sc-k traf"><div class="lab">Investido em tráfego</div><div class="sc-n">R$ 69,5 mil</div><div class="sc-s">22% do faturamento · com o imposto do Meta (R$ 61,0 mil no Gerenciador)</div><span class="dl ">▲ 60% vs setembro</span></div>
+        <div class="sc-k sobra"><div class="lab">Faturamento sem tráfego</div><div class="sc-n">R$ 240,5 mil</div><div class="sc-s">bruto menos tráfego · antes de taxas, comissão e impostos</div><span class="dl up">▲ 271% vs setembro</span></div>
+      </div>
+      <div class="sc-mix">
+        <div class="sc-mixbar"><span class="sc-tr" style="width:22.41%"></span><span class="sc-so" style="width:77.59%"></span></div>
+        <div class="sc-mixleg"><span><i class="tr"></i>Tráfego 22%</span><span><i class="so"></i>Fica sem tráfego 78%</span>
+          <span class="sc-cem">De cada <b>R$ 100</b> faturados, <b>R$ 22</b> foram para anúncio</span></div>
+      </div>
+      <div class="sc-sub">Por produto</div>
+      <div class="sc-rows"><div class="sc-row"><div class="sc-nome"><i style="background:var(--s2)"></i><div><b>Pós-graduação</b><small>Black + venda direta · com parcelas</small></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:18.46%"></span><span class="sc-so" style="width:81.54%"></span><span class="sc-ex" style="width:0.00%"></span></div><span class="sc-tag">18% foi para tráfego</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 250,5 mil</b></div><div><small>Tráfego</small><b>R$ 46,2 mil</b></div><div><small>Sem tráfego</small><b class="pos">R$ 204,3 mil</b></div></div></div><div class="sc-row"><div class="sc-nome"><i style="background:var(--s1)"></i><div><b>Vagal</b></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:6.95%"></span><span class="sc-so" style="width:6.36%"></span><span class="sc-ex" style="width:0.00%"></span></div><span class="sc-tag">52% foi para tráfego</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 33,4 mil</b></div><div><small>Tráfego</small><b>R$ 17,4 mil</b></div><div><small>Sem tráfego</small><b class="pos">R$ 15,9 mil</b></div></div></div><div class="sc-row"><div class="sc-nome"><i style="background:var(--s5)"></i><div><b>Outros</b><small>vendas sem anúncio</small></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:0.00%"></span><span class="sc-so" style="width:7.65%"></span><span class="sc-ex" style="width:0.00%"></span></div><span class="sc-tag">sem tráfego</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 19,2 mil</b></div><div><small>Tráfego</small><b>R$ 0</b></div><div><small>Sem tráfego</small><b class="pos">R$ 19,2 mil</b></div></div></div><div class="sc-row"><div class="sc-nome"><i style="background:var(--s4)"></i><div><b>tDCS</b></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:1.69%"></span><span class="sc-so" style="width:1.09%"></span><span class="sc-ex" style="width:0.00%"></span></div><span class="sc-tag">61% foi para tráfego</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 6,9 mil</b></div><div><small>Tráfego</small><b>R$ 4,2 mil</b></div><div><small>Sem tráfego</small><b class="pos">R$ 2,7 mil</b></div></div></div><div class="sc-row"><div class="sc-nome"><i style="background:var(--s3)"></i><div><b>Grupo de Estudo</b></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:0.00%"></span><span class="sc-so" style="width:0.00%"></span><span class="sc-ex" style="width:0.64%"></span></div><span class="sc-tag neu">captação · sem venda direta no período</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 0</b></div><div><small>Tráfego</small><b>R$ 1,6 mil</b></div><div><small>Sem tráfego</small><b class="neg">− R$ 1,6 mil</b></div></div></div></div>
+      <div class="sc-leg"><span><i class="tr"></i>Tráfego</span><span><i class="so"></i>Sem tráfego</span><span><i class="ex"></i>Tráfego acima do faturado</span></div>
+    </div>
     <div class="hero">
       <div class="hcard blue"><div class="lab">Investido em outubro · todos os produtos</div><div class="hnum">R$ 61,0 mil</div>
         <span class="dl ">▲ 60% vs setembro</span><div class="legend" style="margin-top:12px">5 produtos com investimento no período</div></div>
@@ -481,6 +562,24 @@
   </div>
   <div class="perv" data-per="7d">
     <div class="mhead"><h2>Visão geral dos últimos 7 dias</h2><span>09/11 a 15/11/2026 · comparado com os 7 dias anteriores</span></div>
+
+    <div class="socios">
+      <div class="sc-head"><div><div class="sc-kick">Visão dos sócios</div><h2>Faturamento × tráfego nos últimos 7 dias</h2></div>
+        <div class="sc-fonte">Venda real na Greenn + Voomp · tráfego = gasto do Meta com imposto (× 1,1383)</div></div>
+      <div class="sc-kpis">
+        <div class="sc-k bruto"><div class="lab">Faturamento bruto</div><div class="sc-n">R$ 70,1 mil</div><div class="sc-s">vendas novas + parcelas da Pós</div><span class="dl down">▼ 25% vs 7 dias anteriores</span></div>
+        <div class="sc-k traf"><div class="lab">Investido em tráfego</div><div class="sc-n">R$ 14,8 mil</div><div class="sc-s">21% do faturamento · com o imposto do Meta (R$ 13,0 mil no Gerenciador)</div><span class="dl ">▲ 41% vs 7 dias anteriores</span></div>
+        <div class="sc-k sobra"><div class="lab">Faturamento sem tráfego</div><div class="sc-n">R$ 55,3 mil</div><div class="sc-s">bruto menos tráfego · antes de taxas, comissão e impostos</div><span class="dl down">▼ 33% vs 7 dias anteriores</span></div>
+      </div>
+      <div class="sc-mix">
+        <div class="sc-mixbar"><span class="sc-tr" style="width:21.13%"></span><span class="sc-so" style="width:78.87%"></span></div>
+        <div class="sc-mixleg"><span><i class="tr"></i>Tráfego 21%</span><span><i class="so"></i>Fica sem tráfego 79%</span>
+          <span class="sc-cem">De cada <b>R$ 100</b> faturados, <b>R$ 21</b> foram para anúncio</span></div>
+      </div>
+      <div class="sc-sub">Por produto</div>
+      <div class="sc-rows"><div class="sc-row"><div class="sc-nome"><i style="background:var(--s2)"></i><div><b>Pós-graduação</b><small>Black + venda direta · com parcelas</small></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:4.80%"></span><span class="sc-so" style="width:95.20%"></span><span class="sc-ex" style="width:0.00%"></span></div><span class="sc-tag">5% foi para tráfego</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 63,2 mil</b></div><div><small>Tráfego</small><b>R$ 3,0 mil</b></div><div><small>Sem tráfego</small><b class="pos">R$ 60,1 mil</b></div></div></div><div class="sc-row"><div class="sc-nome"><i style="background:var(--s1)"></i><div><b>Vagal</b></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:11.04%"></span><span class="sc-so" style="width:0.00%"></span><span class="sc-ex" style="width:5.65%"></span></div><span class="sc-tag neg">tráfego passou o faturado em R$ 3.566</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 7,0 mil</b></div><div><small>Tráfego</small><b>R$ 10,5 mil</b></div><div><small>Sem tráfego</small><b class="neg">− R$ 3,6 mil</b></div></div></div><div class="sc-row"><div class="sc-nome"><i style="background:var(--s4)"></i><div><b>tDCS</b></div></div><div class="sc-barra"><div class="sc-trilho"><span class="sc-tr" style="width:0.00%"></span><span class="sc-so" style="width:0.00%"></span><span class="sc-ex" style="width:1.97%"></span></div><span class="sc-tag neu">captação · sem venda direta no período</span></div><div class="sc-nums"><div><small>Bruto</small><b>R$ 0</b></div><div><small>Tráfego</small><b>R$ 1,2 mil</b></div><div><small>Sem tráfego</small><b class="neg">− R$ 1,2 mil</b></div></div></div></div>
+      <div class="sc-leg"><span><i class="tr"></i>Tráfego</span><span><i class="so"></i>Sem tráfego</span><span><i class="ex"></i>Tráfego acima do faturado</span></div>
+    </div>
     <div class="hero">
       <div class="hcard blue"><div class="lab">Investido nos últimos 7 dias · todos os produtos</div><div class="hnum">R$ 13,0 mil</div>
         <span class="dl ">▲ 41% vs 7 dias anteriores</span><div class="legend" style="margin-top:12px">3 produtos com investimento no período</div></div>
